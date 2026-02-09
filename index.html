@@ -1,102 +1,142 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>bassdrop.</title>
+  <meta charset="UTF-8">
+  <title>BASS DROP</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        hotpink,
+        hotpink 40px,
+        cyan 40px,
+        cyan 80px
+      );
+      animation: flicker 0.8s infinite;
+      font-family: "Comic Neue", Comic Sans MS, cursive;
+      cursor: crosshair;
+      overflow-x: hidden;
+    }
+
+    @keyframes flicker {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 100px;
+      color: yellow;
+      text-shadow:
+        6px 6px 0 red,
+        -6px -6px 0 blue;
+      animation: shake 0.15s infinite;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(3px, 3px) rotate(1deg); }
+      50% { transform: translate(-3px, -3px) rotate(-1deg); }
+      100% { transform: translate(3px, -3px) rotate(1deg); }
+    }
+
+    .blink {
+      animation: blink 0.5s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    marquee {
+      font-size: 36px;
+      background: yellow;
+      color: black;
+    }
+
+    .content {
+      text-align: center;
+      font-size: 26px;
+      color: white;
+    }
+
+    button {
+      font-size: 30px;
+      padding: 20px 40px;
+      background: black;
+      color: lime;
+      border: 6px dotted red;
+      transform: rotate(-4deg);
+    }
+
+    button:hover {
+      background: magenta;
+      color: cyan;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: red;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+<body>
 
-<center>
-  <h1>bassdrop.</h1>
+  <marquee scrollamount="25">
+    NEW DROP OUT NOW — BASS DROP — TURN IT UP — DO NOT USE HEADPHONES
+  </marquee>
 
-  <hr width="80%">
+  <h1 class="blink">BASS DROP</h1>
 
-  <table border="1" cellpadding="10" cellspacing="0" width="80%">
-    <tr bgcolor="#dddddd">
-      <td colspan="2" align="center">
-        <b>about me</b>
-      </td>
-    </tr>
-    <tr>
-      <td width="30%" valign="top">
-        <b>name:</b><br>
-        sammy<br><br>
+  <div class="content">
+    <p>hyperpop but louder than necessary</p>
+    <p>distortion is a personality trait</p>
 
-        <b>occupation:</b><br>
-        musician & developer<br><br>
+    <button onclick="drop()">DROP THE BASS</button>
 
-        <b>favorite things:</b>
-        <ul>
-          <li>music</li>
-          <li>the internet</li>
-          <li>developing</li>
-        </ul>
-      </td>
+    <p class="blink">THIS WEBSITE IS NOT MIXED PROPERLY</p>
+  </div>
 
-      <td valign="top">
-        <p>
-      my birthday is february 23. wish me a happy birthday! my fav music artists are julie, willow, local h, nirvana, blur, the strokes, black sabbath + more!
-        </p>
+  <audio id="audio" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
 
-        <p>
-          <marquee behavior="scroll" direction="left">
-            be the best you
-          </marquee>
-        </p>
-      </td>
-    </tr>
-  </table>
+  <div class="footer">
+    BASS DROP 2026 — best viewed at maximum volume
+  </div>
 
-  <br>
+  <script>
+    function drop() {
+      alert("BASS DROPPED");
+      document.body.style.filter =
+        "invert(1) saturate(400%) hue-rotate(" + Math.random() * 360 + "deg)";
+    }
 
-  <table border="1" cellpadding="10" cellspacing="0" width="80%">
-    <tr bgcolor="#dddddd">
-      <td align="center">
-        <b>my projects</b>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li>
-            <b>tuesday10</b><br>
-            my music<br>
-            <a href="https://soundcloud.com/alexandriaaband">view project</a>
-          </li>
-          <br>
-          <li>
-            <b>my art instagram</b><br>
-            my drawings<br>
-            <a href="https://www.instagram.com/girlboner444">view project</a>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <br>
-
-  <table border="1" cellpadding="10" cellspacing="0" width="80%">
-    <tr bgcolor="#dddddd">
-      <td align="center">
-        <b>links</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="https://www.instagram.com/bassdrop.space">my instagram</a> 
-      </td>
-    </tr>
-  </table>
-
-  <br>
-
-  <p>
-    <font size="2">
-      © 2026 bassdrop.<br>
-    </font>
-  </p>
-</center>
+    document.addEventListener("mousemove", function(e) {
+      const noise = document.createElement("div");
+      noise.style.position = "absolute";
+      noise.style.left = e.pageX + "px";
+      noise.style.top = e.pageY + "px";
+      noise.style.width = "12px";
+      noise.style.height = "12px";
+      noise.style.background = "white";
+      noise.style.opacity = "0.6";
+      document.body.appendChild(noise);
+      setTimeout(() => noise.remove(), 200);
+    });
+  </script>
 
 </body>
 </html>
