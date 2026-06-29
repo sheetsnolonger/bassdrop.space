@@ -1,140 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>portfolio / commissions</title>
+  <title>bass2drop beats</title>
   <meta charset="UTF-8">
   <style>
     body {
-      background: white;
-      color: black;
-      font-family: "Times New Roman", serif;
-      font-size: 16px;
-      margin: 40px;
+      background: #050505;
+      color: #eeeeee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 850px;
+      max-width: 95%;
+      margin: 30px auto;
+      border: 2px solid #ff00cc;
+      background: #111;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 1px solid #ff00cc;
+      padding-bottom: 15px;
+    }
+
+    h1 {
+      color: #00ffff;
+      font-size: 42px;
+      margin: 0;
+      text-shadow: 2px 2px #ff00cc;
+    }
+
+    h2 {
+      color: #ff00cc;
+      border-bottom: 1px dotted #555;
+      padding-bottom: 5px;
     }
 
     a {
-      color: black;
+      color: #00ffff;
     }
 
-    img {
-      max-width: 300px;
-      display: block;
-      margin: 10px 0;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid black;
+    .tagline {
+      color: #aaa;
+      font-style: italic;
     }
 
     .section {
-      margin-bottom: 35px;
+      margin: 30px 0;
+    }
+
+    .beat {
+      border: 1px solid #333;
+      background: #080808;
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+
+    .beat h3 {
+      margin: 0 0 8px 0;
+      color: #fff;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .prices {
+      background: #000;
+      border: 1px solid #00ffff;
+      padding: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #160016;
+      border: 1px solid #ff00cc;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>bass2drop</h1>
-  <p>website commissions / beat commissions / art / coding</p>
+  <div class="wrap">
 
-  <hr>
+    <header>
+      <h1>bass2drop</h1>
+      <p class="tagline">beats / music production / commissions</p>
+      <p>
+        <a href="#beats">beats</a> |
+        <a href="#services">services</a> |
+        <a href="#prices">prices</a> |
+        <a href="#contact">contact</a>
+      </p>
+    </header>
 
-  <div class="section">
-    <h2>about</h2>
-    <p>
-      hi, i make websites, beats, and digital work for people.</p>
-                                                                
-      <p>this page is my portfolio and commission info.
-    </p>
+    <div class="section">
+      <h2>about</h2>
+      <p>
+        hi, i make beats and music for artists, edits, games, websites,
+        underground projects, and anyone who needs a unique sound.
+      </p>
+      <p>
+        styles: breakcore, hyperpop, digicore, ambient, trap, electronic,
+        weird internet music, and custom experimental stuff.
+      </p>
+    </div>
+
+    <div class="section" id="beats">
+      <h2>featured beats</h2>
+
+      <div class="beat">
+        <h3>beat 01 - glitch angel</h3>
+        <p>fast electronic beat with distorted drums and bright melodies.</p>
+        <audio controls>
+          <source src="beats/beat1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="beat">
+        <h3>beat 02 - night server</h3>
+        <p>dark internet trap beat with heavy bass.</p>
+        <audio controls>
+          <source src="beats/beat2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="beat">
+        <h3>beat 03 - soft crash</h3>
+        <p>dreamy hyperpop / ambient beat.</p>
+        <audio controls>
+          <source src="beats/beat3.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <div class="section" id="services">
+      <h2>services</h2>
+      <ul>
+        <li>custom beats</li>
+        <li>exclusive beats</li>
+        <li>background music for games or websites</li>
+        <li>mixing help</li>
+        <li>intro / outro music</li>
+        <li>sound design</li>
+      </ul>
+    </div>
+
+    <div class="section" id="prices">
+      <h2>prices</h2>
+
+      <div class="prices">
+        <p><b>basic beat:</b> $10+</p>
+        <p><b>custom beat:</b> $25+</p>
+        <p><b>exclusive beat:</b> $50+</p>
+        <p><b>game / website loop:</b> $15+</p>
+        <p><b>mixing help:</b> ask</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>links</h2>
+      <p>
+        <a href="#">soundcloud</a><br>
+        <a href="#">spotify</a><br>
+        <a href="#">bandcamp</a><br>
+        <a href="#">youtube</a>
+      </p>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>contact</h2>
+
+      <div class="contact">
+        <p>for beats or commissions:</p>
+        <p><b>discord: @febcel</b></p>
+        <p>send what style you want, your budget, and examples.</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 bass2drop. all rights reserved.
+    </footer>
+
   </div>
-
-  <div class="section">
-    <h2>website commissions</h2>
-    <p>i can make simple personal sites, artist pages, portfolios, landing pages, and old-web style pages.</p>
-
-    <ul>
-      <li>basic html/css website</li>
-      <li>music artist website</li>
-      <li>portfolio page</li>
-      <li>link page</li>
-      <li>old web / raw website</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>beat commissions</h2>
-    <p>custom beats for artists, projects, intros, edits, games, or personal use.</p>
-
-    <ul>
-      <li>breakcore</li>
-      <li>hyperpop</li>
-      <li>ambient</li>
-      <li>experimental</li>
-      <li>custom style</li>
-    </ul>
-  </div>
-
-<div class="section">
-  <h2>portfolio</h2>
-
-  <h3>website work</h3>
-
-  <div class="gallery">
-
-    <a href="images/website1.png" target="_blank">
-      <img src="images/website1.png" alt="website 1">
-    </a>
-
-    <a href="images/website2.png" target="_blank">
-      <img src="images/website2.png" alt="website 2">
-    </a>
-
-  </div>
-
-  <h3>beats / music</h3>
-
-<p>contact @bass2drop on discord for beat information/examples.</p>
-
-  <div class="section">
-    <h2>prices</h2>
-
-    <p><b>websites (limited)</b></p>
-    <ul>
-      <li>simple one page site: $30+</li>
-      <li>multi page site: $40+</li>
-      <li>custom coded site: $70+</li>
-    </ul>
-
-    <p><b>beats</b></p>
-    <ul>
-      <li>basic beat: $20+</li>
-      <li>custom beat: $40+</li>
-      <li>exclusive beat: $80+</li>
-    </ul>
-
-    <p>prices can change depending on the project.</p>
-  </div>
-
-  <div class="section">
-    <h2>commission rules</h2>
-    <ul>
-      <li>payment upfront or half upfront</li>
-      <li>no refunds after work has started</li>
-      <li>credit is appreciated</li>
-      <li>large edits may cost extra</li>
-      <li>do not resell my work without permission</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>contact</h2>
-    <p>discord: <b>@bass2drop</b></p>
-  </div>
-
-  <hr>
-
-  <p>© 2026 bass2drop</p>
 
 </body>
 </html>
